@@ -20,8 +20,7 @@ export const useQuizSelection = () => {
             setCategoryList([])
             setIsLoaded(false)
 
-        }
-        
+        }   
     }
 
     useEffect(() => {
@@ -36,14 +35,12 @@ export const useQuizSelection = () => {
     /**
      * Actions components
      */
-
     const onCreation = (e) => {
         e.preventDefault()
         console.log("onCreation", e.target)
         console.log("difficulty", e.target.difficulty.value)
         console.log("category", e.target.category.value)
     }
-
 
     return {
         categoryList,

@@ -4,6 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  //base: "/",
-  base: "/CertificationReactV2_2024",
+  base: "/CertificationReactV2_2024"
 })

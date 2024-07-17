@@ -3,20 +3,19 @@ import { InvalidRoute } from "./Components/InvalidRoute"
 import { QuizMaker } from "./Components/QuizMaker"
 import { QuizResult } from "./Components/QuizResult"
 
-console.log("router")
-const BASE_URL = '/CertificationReactV2_2024';
-//const BASE_URL = '/';
-export const memoryRouter = createBrowserRouter([
+export const BASE_URL = '/';
+export const RESULT_URL = '/Solution';
+export const memoryRouter = createMemoryRouter([
     {
         path: BASE_URL,
         element: <QuizMaker/>
     },
     {
-        path: BASE_URL+'/Solution',
+        path: RESULT_URL,
         element: <QuizResult/>
     },
     {
         path: '*',
         element: <InvalidRoute/>
     }
-])
+]);

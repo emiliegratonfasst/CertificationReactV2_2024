@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+import { RESULT_URL } from "../Router"
 import { QuizSelection } from "./QuizSelection"
 
 export const QuizMaker = () => {
@@ -5,7 +7,7 @@ export const QuizMaker = () => {
         <>
             <h1>Quiz Maker</h1>
             <QuizSelection/>
-            <p><a href= '/CertificationReactV2_2024/Solution'>Solution</a></p>
+            <Link to={RESULT_URL}>Link Solution</Link>
         </>
     )
 }
