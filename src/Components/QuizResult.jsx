@@ -9,11 +9,11 @@ import { FixedQuestion } from "./FixedQuestion";
  */
 export const QuizResult = () => {
     const {quizData, reset} = useContext(DataContext);
-    
-    const isCorrectAnswers = (answers) => {
+
+    const isCorrectAnswer = (answers) => {
         return answers.filter((a) => a.isCorrect === true && a.isSelected === true).length > 0
     }
-    const nbCorrectAnswers = quizData.filter((q) => isCorrectAnswers(q.answers)).length
+    const nbCorrectAnswers = quizData.filter((q) => isCorrectAnswer(q.answers)).length
 
     const color = nbCorrectAnswers<=1 ? 'red' : nbCorrectAnswers>=4 ? 'green' : 'yellow'
 
@@ -24,7 +24,7 @@ export const QuizResult = () => {
                 quizData.map((q) => <FixedQuestion key={q.key} questionAnswers={q}/>)
             }
             <p className={color}>You scored {nbCorrectAnswers} out of {quizData.length}</p>
-            <button><Link onClick={() => reset()} to={BASE_URL}>Create a new quiz</Link></button>
+            <button id='resetBtn'><Link onClick={() => reset()} to={BASE_URL}>Create a new quiz</Link></button>
         </>
     )
 }

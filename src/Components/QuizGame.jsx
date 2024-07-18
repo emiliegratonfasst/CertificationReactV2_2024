@@ -37,7 +37,7 @@ export const QuizGame = ({param, quizData, setQuizData}) => {
                                 onSelected={onSelected}/>)                             
                         }
                         <div className={'submitQuiz'}>
-                            {isFinish && <button><Link to={RESULT_URL}>Link Solution</Link></button>}
+                            {isFinish && <button id='ValidateBtn' type='submit'><Link to={RESULT_URL}>Link Solution</Link></button>}
                         </div>
                         </>
                     )
