@@ -1,0 +1,65 @@
+{
+    "response_code": 0,
+    "results": [
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Entertainment: Film",
+        "question": "Which of these films is NOT set in Los Angeles?",
+        "correct_answer": "RoboCop",
+        "incorrect_answers": [
+          "Blade Runner",
+          "The Terminator",
+          "Predator 2"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Entertainment: Film",
+        "question": "Which of the following actors has only been in a Quentin Tarantino directed film once?",
+        "correct_answer": "John Travolta",
+        "incorrect_answers": [
+          "Christoph Waltz",
+          "Harvey Keitel",
+          "Samuel L. Jackson"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Entertainment: Film",
+        "question": "The 2016 Disney animated film &#039;Moana&#039; is based on which culture?",
+        "correct_answer": "Polynesian",
+        "incorrect_answers": [
+          "Native American",
+          "Japanese",
+          "Nordic"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Entertainment: Film",
+        "question": "In which film does Humphrey Bogart say the famous line, &quot;Here&#039;s looking at you, kid&quot;?",
+        "correct_answer": "Casablanca",
+        "incorrect_answers": [
+          "The Maltese Falcon",
+          "The Treasure of the Sierra Madre",
+          "Citizen Kane"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Entertainment: Film",
+        "question": "Which of these actors/actresses is NOT a part of the cast for the 2016 movie &quot;Suicide Squad&quot;?",
+        "correct_answer": "Scarlett Johansson",
+        "incorrect_answers": [
+          "Jared Leto",
+          "Will Smith",
+          "Margot Robbie"
+        ]
+      }
+    ]
+  }

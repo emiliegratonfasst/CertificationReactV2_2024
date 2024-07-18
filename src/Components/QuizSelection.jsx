@@ -1,12 +1,13 @@
 import { useQuizSelection } from "../Hooks/useQuizSelection";
+import PropTypes from 'prop-types';
 
 /**
  * Options to create a new Game
  * @returns 
  */
-export const QuizSelection = () => {
+export const QuizSelection = ({setParam}) => {
 
-    const {categoryList, isLoaded, onCreation} = useQuizSelection();
+    const {categoryList, isLoaded, onCreation} = useQuizSelection(setParam);
 
     return (
         <>
@@ -27,4 +28,8 @@ export const QuizSelection = () => {
             }
         </>
     )
+}
+
+QuizSelection.propTypes = {
+    setParam: PropTypes.func
 }
