@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import request from './dataTest.json'
 
 /**
  * Hook de récupération du quiz
@@ -46,7 +45,7 @@ export const useFetchQuiz = (param, setQuizData) => {
 
         try{
             const url = 'https://opentdb.com/api.php?amount=5&category='+param.category+'&difficulty='+param.difficulty+'&type=multiple'
-            //const request = await fetch(url).then((data) => data.json())
+            const request = await fetch(url).then((data) => data.json())
             let tmpData = request.results.map((r, index) => {
                 const key = 'Q'+index
                 return {
