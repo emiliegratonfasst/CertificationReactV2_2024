@@ -7,11 +7,11 @@ import { createContext } from 'react'
 export const DataContext = createContext()
 
 function App() {
-  const {quizData, setQuizData, quizParam, setQuizParam} = useQuizData()
+  const {quizData, setQuizData, quizParam, setQuizParam, reset} = useQuizData()
 
   return (
     <>
-        <DataContext.Provider value={{quizData, setQuizData, quizParam, setQuizParam}}>
+        <DataContext.Provider value={{quizData, setQuizData, quizParam, setQuizParam, reset}}>
           <RouterProvider router={memoryRouter}/>
         </DataContext.Provider>
     </>

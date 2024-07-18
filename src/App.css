@@ -20,7 +20,27 @@
   color:white
 }
 
-.Game button.selected{
+button.green{
   background-color: green;
   color:white
+}
+
+button.red{
+  background-color: red;
+  color:white
+}
+
+p.green{
+  background-color: green;
+  color:black
+}
+
+p.red{
+  background-color: red;
+  color:black
+}
+
+p.yellow{
+  background-color: yellow;
+  color:black
 }

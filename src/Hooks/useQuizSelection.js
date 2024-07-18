@@ -6,8 +6,8 @@ export const useQuizSelection = (setParam) => {
      * Utils state
      */
     const [categoryList, setCategoryList] = useState([])
-    const [isLoaded, setIsLoaded] = useState(false)
-
+    const [loadedState, setLoadedState] = useState({isLoaded:false, isError:false})
+    
     /**
      * Init Data
      */
@@ -15,10 +15,10 @@ export const useQuizSelection = (setParam) => {
         try{
             const request = await fetch('https://opentdb.com/api_category.php').then((data) => data.json())
             setCategoryList(request.trivia_categories)
-            setIsLoaded(true)
+            setLoadedState({isLoaded:true, isError:false})
         }catch(e){
             setCategoryList([])
-            setIsLoaded(false)
+            setLoadedState({isLoaded:true, isError:true})
 
         }   
     }
@@ -27,7 +27,7 @@ export const useQuizSelection = (setParam) => {
         fetchCategory()
         return () => {
             setCategoryList([])
-            setIsLoaded(false)
+            setLoadedState({isLoaded:false, isError:false})
         }
     }, [])
  
@@ -44,7 +44,8 @@ export const useQuizSelection = (setParam) => {
 
     return {
         categoryList,
-        isLoaded,
+        isLoaded: loadedState.isLoaded,
+        isError: loadedState.isError,
         onCreation
     }
 }

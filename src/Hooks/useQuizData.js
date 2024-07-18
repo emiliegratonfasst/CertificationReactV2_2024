@@ -23,10 +23,16 @@ export const useQuizData = () => {
      */
     const [quizData, setQuizData] = useState();
 
+    const reset = () => {
+        setQuizData()
+        setQuizParam()
+    }
+
     return {
         quizData,
         setQuizData,
         quizParam,
-        setQuizParam
+        setQuizParam,
+        reset
     }
 }

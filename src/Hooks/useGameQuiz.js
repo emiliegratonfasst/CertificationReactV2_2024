@@ -5,7 +5,7 @@ export const useGameQuiz = (setQuizData) => {
     }
 
     /**
-     * Action boutons
+     * Action bouton
      */
     const onSelected = (e, key) => {
         e.preventDefault()
