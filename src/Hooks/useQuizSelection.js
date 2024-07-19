@@ -19,7 +19,6 @@ export const useQuizSelection = (setParam) => {
         }catch(e){
             setCategoryList([])
             setLoadedState({isLoaded:true, isError:true})
-
         }   
     }
 

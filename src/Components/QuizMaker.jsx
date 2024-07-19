@@ -13,9 +13,9 @@ export const QuizMaker = () => {
     return (
         <>
             <h1>Quiz Maker</h1>
-            <QuizSelection setParam={data.setQuizParam}/>
+            <QuizSelection setParam={data.setQuizOptions}/>
             <QuizGame 
-                param={data.quizParam}
+                param={data.quizOptions}
                 quizData= {data.quizData}
                 setQuizData= {data.setQuizData}/>
         </>

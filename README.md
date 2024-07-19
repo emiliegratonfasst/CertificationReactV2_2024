@@ -17,18 +17,22 @@ src
      |_ useGameQuiz.js
      |_ useQuizData.js
      |_ useQuizSelection.js
+|___ Utils
+     |_ quizUtils.js
 App.jx
 main.jsx
 ```
 
 ## Structure objet type 
 Référencé dans useQuizData
-### Paramètre de personnalisation du quizz 
+### Paramètres de personnalisation du quizz 
 ```
+quizOptions
 {difficulty: int, category: string}
 ```
 ### Structure de donnée du quiz
 ```
+quizData
 [{
     key: string,
     isAnswer: boolean

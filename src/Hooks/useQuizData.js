@@ -3,7 +3,7 @@ import { useState } from "react";
 export const useQuizData = () => {
     // Stock les params pour requêter le quizz 
     // {difficulty: int, category: string}
-    const [quizParam, setQuizParam] = useState();
+    const [quizOptions, setQuizOptions] = useState();
 
     // Stock les données du quizz pour affichage sur le jeu et correction, structure prévue
     /**
@@ -25,14 +25,14 @@ export const useQuizData = () => {
 
     const reset = () => {
         setQuizData()
-        setQuizParam()
+        setQuizOptions()
     }
 
     return {
         quizData,
         setQuizData,
-        quizParam,
-        setQuizParam,
+        quizOptions,
+        setQuizOptions,
         reset
     }
 }

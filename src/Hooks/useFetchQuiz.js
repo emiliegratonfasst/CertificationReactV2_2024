@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { setAnswers } from "../Utils/quizUtils"
 
 /**
  * Hook de récupération du quiz
@@ -13,29 +14,6 @@ export const useFetchQuiz = (param, setQuizData) => {
     /**
      * Init Data
      */
-    // Transpose la liste de réponses sous une nouvelle structure
-    const getFormattedAnswer = (listAnswers, isCorrect=false) => {
-        return listAnswers.map((l) => ({
-                answer: l,
-                isCorrect: isCorrect,
-                isSelected: false
-        }))
-    }
-
-    // Retourne la liste complète
-    const setAnswers = (rightAnswers, wrongAnswers, idQuestion) =>{
-        const rightAnswerFormated = getFormattedAnswer([rightAnswers], true)
-        const wrongAnswersFormated = getFormattedAnswer(wrongAnswers, false)
-
-        // Mélange la liste et assigne une clé selon leur nouvel ordre
-        let shuffleList = [...rightAnswerFormated, ...wrongAnswersFormated].sort(() => Math.random() -0.5) 
-        return shuffleList.map((s, index) => ({
-            ...s,
-            key: idQuestion+'-A'+index
-        }))
-
-    }
-
     const fetchQuizz = async (param) => {
         // Effet de bord condition initial
         if (param === null || param === undefined){
