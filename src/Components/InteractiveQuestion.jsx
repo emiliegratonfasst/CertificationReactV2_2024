@@ -7,14 +7,13 @@ import PropTypes from 'prop-types';
  * @returns 
  */
 export const InteractiveQuestion = ({questionAnswers, onSelected}) => {
-    const {question, answers, isAnswer} = questionAnswers
+    const {question, answers} = questionAnswers
     return (
         <>
             <p>{question}</p>
             {
                 answers.map((a) => <button 
                     key={a.key} 
-                    disabled={(isAnswer && !a.isSelected)} 
                     onClick={(e) => onSelected(e, a.key)} 
                     className={a.isSelected ? 'green' : ''}>
                         {a.answer}

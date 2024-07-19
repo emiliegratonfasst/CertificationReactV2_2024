@@ -15,7 +15,7 @@ import { InteractiveQuestion } from './InteractiveQuestion';
 export const QuizGame = ({param, quizData, setQuizData}) => {
 
     const {loadedState} = useFetchQuiz(param, setQuizData, quizData)
-    const {onSelected} = useGameQuiz(setQuizData)
+    const {onSelected} = useGameQuiz(quizData, setQuizData)
 
     // Controle que toutes les questions ont étées répondues
     let isFinish
@@ -24,26 +24,27 @@ export const QuizGame = ({param, quizData, setQuizData}) => {
     : isFinish = false
 
     return (
-        <div className='Game'>
+        <>
             {
                 loadedState.isLoaded && (
                     loadedState.isError 
                     ? <p>Une erreur à une lieu lors du chargement du quizz : {loadedState.msg}</p>
                     : (<>
-                        {   
-                            quizData.map((q) => <InteractiveQuestion 
-                                key={q.key} 
-                                questionAnswers={q} 
-                                onSelected={onSelected}/>)                             
-                        }
+                        <div className='Game'>
+                            {   
+                                quizData.map((q) => <InteractiveQuestion 
+                                    key={q.key} 
+                                    questionAnswers={q} 
+                                    onSelected={onSelected}/>)                             
+                            }
+                        </div>
                         <div className={'submitQuiz'}>
                             {isFinish && <button id='ValidateBtn' type='submit'><Link to={RESULT_URL}>Link Solution</Link></button>}
                         </div>
-                        </>
-                    )
+                    </>)
                 )
             }   
-        </div>
+        </>
     )
 }
 
