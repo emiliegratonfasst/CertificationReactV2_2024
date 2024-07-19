@@ -39,7 +39,7 @@ export const QuizGame = ({param, quizData, setQuizData}) => {
                             }
                         </div>
                         <div className={'submitQuiz'}>
-                            {isFinish && <button id='ValidateBtn' type='submit'><Link to={RESULT_URL}>Link Solution</Link></button>}
+                            {isFinish && <button id='ValidateBtn' type='submit'><Link to={RESULT_URL}>submit</Link></button>}
                         </div>
                     </>)
                 )
